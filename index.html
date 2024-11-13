@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e Hora Atual</title>
+</head>
+<body>
+    <h1>Data e Hora Atual</h1>
+    <div id="dataHora"></div>
+
+    <script>
+        function atualizarDataHora(){
+            const agora = new Date();
+            const opcoes = {year: 'numeric', month: 'lang', day: 'numeric', hour: '2 digit', minute: '2 digit', second: '2 digit',hour12: false};
+            const dataHoraFormatada =agora.tolocalString('pt-BR', opcoes);
+            document.getElementById('dataHora') = dataHoraFormatada;
+        }
+    </script>
+</body>
+</html>
